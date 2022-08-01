@@ -1,5 +1,3 @@
-import os
-import re
 import datetime
 
 from unittest.mock import patch

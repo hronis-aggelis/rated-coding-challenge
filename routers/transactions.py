@@ -8,8 +8,6 @@ from fastapi import Request
 from fastapi.responses import JSONResponse
 from pydantic import ValidationError
 
-# from ..schemas import transactions_response
-# from .. import db
 from schemas import transactions_response
 import db
 
@@ -41,6 +39,3 @@ async def index(
         if transaction_response_obj else {"message": "invalid hash"},
         status_code=200
     )
-
-import sqlalchemy
-sqlalchemy.engine.row.Row
