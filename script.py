@@ -43,7 +43,7 @@ def main():
     df_merged = df_merged.drop('index', axis=1)
 
     # create engine to connect to database
-    engine = create_engine('mysql+mysqldb://root:password@localhost:3306/rated', echo = False)
+    engine = create_engine('mysql+mysqldb://root:password@0.0.0.0:3306/rated', echo = False)
     df_merged.to_sql(con=engine, name='transactions', if_exists='replace')
 
 if __name__ == "__main__":

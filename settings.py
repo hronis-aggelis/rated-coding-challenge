@@ -32,7 +32,7 @@ RDS_DB_PASSWORD = load_variable(
 )
 RDS_DB_HOST = load_variable(
     name="RDS_DB_HOST",
-    default="localhost"
+    default="0.0.0.0"
 )
 
 DATABASE_URL = f"mysql://{RDS_DB_USER}:{RDS_DB_PASSWORD}@{RDS_DB_HOST}/rated"
