@@ -3,13 +3,10 @@
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
-# from . import routers
-# from .db import database
 from routers import transactions
 from db import database
 
 app = FastAPI()
-# app.include_router(routers.transactions.router)
 app.include_router(transactions.router)
 
 
